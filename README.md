@@ -14,4 +14,4 @@ Sites must be specified in the `SITES_TO_IGNORE` dictionary, in the script.
 
 It's **STRONGLY** recommended that you save a copy of `hosts` file. Please DO NOT name this backup as `hosts.bak`
 
-_Tested only on linux Ubuntu 12.04LTS._
+_Tested on linux Ubuntu 12.04LTS, python 2.7.3_
