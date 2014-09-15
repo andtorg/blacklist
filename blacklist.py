@@ -5,14 +5,14 @@ import os, errno
 import sys
 
 SITES_TO_IGNORE = {
-	'facebook': {'search_string': 'facebook', 'site_address':'www.facebook.com'},
-	'twitter':  {'search_string': 'twitter', 'site_address':'twitter.com'},
-	'g+':  {'search_string': 'plus', 'site_address':'plus.google.com'},
-	'gmail':  {'search_string': 'mail.google', 'site_address':'mail.google.com'},
-	'flickr':  {'search_string': 'flickr', 'site_address':'www.flickr.com'},
-	'flickr_2':  {'search_string': 'flickr', 'site_address':'flickr.com'},
-	'repubblica':  {'search_string': 'repubblica', 'site_address':'repubblica.it'},
-	'repubblica_2':  {'search_string': 'repubblica', 'site_address':'www.repubblica.it'}
+	'facebook': {'search_string': 'facebook', 'site_address':'www.facebook.com'}
+	,'twitter':  {'search_string': 'twitter', 'site_address':'twitter.com'}
+	,'g+':  {'search_string': 'plus', 'site_address':'plus.google.com'}
+	,'gmail':  {'search_string': 'mail.google', 'site_address':'mail.google.com'}
+	,'flickr':  {'search_string': 'flickr', 'site_address':'www.flickr.com'}
+	,'flickr_2':  {'search_string': 'flickr', 'site_address':'flickr.com'}
+	,'repubblica':  {'search_string': 'repubblica', 'site_address':'repubblica.it'}
+	,'repubblica_2':  {'search_string': 'repubblica', 'site_address':'www.repubblica.it'}
 }
 
 ACCEPTED_ARGUMENTS = {
