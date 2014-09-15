@@ -2,6 +2,7 @@ blacklist
 =========
 
 A simple python script to blacklist some internet sites on a pc.
+
 USAGE:
 make it executable with `chmod u+x blacklist.py`, then 
 * `sudo ./blacklist.py act` for activating the blacklist
