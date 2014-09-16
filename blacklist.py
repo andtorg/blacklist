@@ -33,10 +33,10 @@ def edit_file_host(command, source_file=host_file, backup_file=backup_host_file)
 	_remove_file_if_exists(backup_file)
 	_make_backup_copy(source_file, backup_file)
 	if command == "act":
-		_enable_noisy_hosts(source_file)
+		_enable_host_filter(source_file)
 		print "blacklist activated"
 	else:
-		_disable_noisy_hosts(source_file)
+		_disable_host_filter(source_file)
 		print "blacklist deactivated"
 
 def _check_valid_argument(arg):
@@ -44,7 +44,7 @@ def _check_valid_argument(arg):
 		_allowed_args = ACCEPTED_ARGUMENTS.keys()
 		raise IndexError ('{} is not a valid argument. Allowed values are: {}'.format(arg, _allowed_args))
 
-def _enable_noisy_hosts(file_path):
+def _enable_host_filter(file_path):
 	global file_lines
 	file_lines = _get_file_lines(file_path)  
 
@@ -63,7 +63,7 @@ def _append_noisy_sites(sites_dict):
 		ignoring_site_list.append('{} {}\n'.format(ignoring_site_string, sites_dict[k]['site_address']))
 	return ignoring_site_list
 
-def _disable_noisy_hosts(file_path):
+def _disable_host_filter(file_path):
 	global file_lines
 	file_lines = _get_file_lines(file_path)
 	cleaned_file_lines = _remove_noisy_sites(file_lines, SITES_TO_IGNORE)
